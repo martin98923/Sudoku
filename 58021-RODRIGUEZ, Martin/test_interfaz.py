@@ -59,5 +59,26 @@ class TestInterface(unittest.TestCase):
         usuario.tamaño = 9
         self.assertTrue(usuario.ingresar_valor(6, 8, 2))
 
+    def test_interfaz_12(self):
+        usuario = Interfaz()
+        usuario.tamaño = 4
+        self.assertTrue(usuario.ingresar_valor(0, 0, 2))
+
+    def test_interfaz_13(self):
+        usuario = Interfaz()
+        usuario.tamaño = 4
+        self.assertFalse(usuario.ingresar_valor(6, 10, 4))
+
+    def test_interfaz_14(self):
+        usuario = Interfaz()
+        usuario.tamaño = 4
+        self.assertFalse(usuario.ingresar_valor(0, "f", 2))
+
+    def test_interfaz_15(self):
+        usuario = Interfaz()
+        usuario.tamaño = 4
+        self.assertFalse(usuario.ingresar_valor(0, 2, 10))
+
+    
 if __name__ == '__main__':    
     unittest.main()
