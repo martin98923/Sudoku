@@ -11,4 +11,4 @@ RUN pip install requests
 
 RUN pip install -r requirements.txt
 
-CMD ["python", "./test_interfaz.py"]
+CMD ["python", "./test_interfaz.py"] && ["python", "./test_sudoku.py"] && ["python", "./test_api.py"]
